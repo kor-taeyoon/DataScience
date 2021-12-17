@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Spam classifier</title>
+</head>
+<form action="{{ url_for('index') }}" method="POST">
+	<fieldset>
+		<legend>Input values:</legend>
+		<p>
+			Text message:
+			<input name="text_message" type="text" required />
+		</p>
+		
+		
+		<input type="submit" />
+	</fieldset>
+</form>
+<br>
+<div>
+	{% if result %}
+		<br>Classified as: <p style="font-size:20px; margin-left:30px;">{{ result }}</p>
+	{% endif %}
+</div>
+</html>
+
